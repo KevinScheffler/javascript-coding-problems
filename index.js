@@ -34,19 +34,38 @@
 
 // sumOfPositive
 
-const sumOfPositive = nums => {
-  let sum = 0;
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] > 0) {
-      sum += nums[i];
-    }
+// const sumOfPositive = nums => {
+//   let sum = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] > 0) {
+//       sum += nums[i];
+//     }
+//   }
+//   return sum;
+// }
+
+
+
+
+// console.log(sumOfPositive([1,-2,3,4]));
+// console.log(sumOfPositive([-2,-5,-10,-1]));
+// console.log(sumOfPositive([4,40,-40,-4]));
+
+
+// multiplyNumbers
+
+const multiplyNumbers = (num1, num2) => {
+  let multiplied = num1;
+  if (num2 < 1) {
+    return 0; 
+  } else {
+  for (let i = 0; i < num2 - 1; i++) {
+    multiplied += num1;
   }
-  return sum;
+}
+  return multiplied;
 }
 
-
-
-
-console.log(sumOfPositive([1,-2,3,4]));
-console.log(sumOfPositive([-2,-5,-10,-1]));
-console.log(sumOfPositive([4,40,-40,-4]));
+console.log(multiplyNumbers(1,0));
+console.log(multiplyNumbers(5,5));
+console.log(multiplyNumbers(100,500));
