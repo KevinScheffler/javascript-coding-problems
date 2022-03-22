@@ -54,18 +54,51 @@
 
 // multiplyNumbers
 
-const multiplyNumbers = (num1, num2) => {
-  let multiplied = num1;
-  if (num2 < 1) {
-    return 0; 
-  } else {
-  for (let i = 0; i < num2 - 1; i++) {
-    multiplied += num1;
+// const multiplyNumbers = (num1, num2) => {
+//   let multiplied = num1;
+//   if (num2 < 1) {
+//     return 0; 
+//   } else {
+//   for (let i = 0; i < num2 - 1; i++) {
+//     multiplied += num1;
+//   }
+// }
+//   return multiplied;
+// }
+
+
+// function multiplyNumbers(num1, num2) {
+//   var sum = 0;
+//   while (num1--) {
+//     sum += num2;
+//   }
+//   return sum;
+// }
+
+// console.log(multiplyNumbers(1,0));
+// console.log(multiplyNumbers(5,5));
+// console.log(multiplyNumbers(100,500));
+
+
+
+// repeatString
+
+// const repeatString = (s, n) => {
+//   let str = '';
+//   for (let i = 0; i < n; i++) {
+//     str += s;
+//   }
+//   return str;
+// }
+
+const repeatString = (s, n) => {
+  var newStr = "";
+  while (n--) {
+    newStr += s;
   }
-}
-  return multiplied;
+  return newStr;
 }
 
-console.log(multiplyNumbers(1,0));
-console.log(multiplyNumbers(5,5));
-console.log(multiplyNumbers(100,500));
+console.log(repeatString("Abc", 3));
+console.log(repeatString("B", 5));
+console.log(repeatString("hello", 2));
