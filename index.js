@@ -91,14 +91,49 @@
 //   return str;
 // }
 
-const repeatString = (s, n) => {
-  var newStr = "";
-  while (n--) {
-    newStr += s;
+// const repeatString = (s, n) => {
+//   var newStr = "";
+//   while (n--) {
+//     newStr += s;
+//   }
+//   return newStr;
+// }
+
+// console.log(repeatString("Abc", 3));
+// console.log(repeatString("B", 5));
+// console.log(repeatString("hello", 2));
+
+
+// isPalindrome
+
+// const isPalindrome = str => {
+//   return str === str.split('').reverse().join('');
+// }
+
+// function isPalindrome(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     let rightIndex = str.length - 1 - i;
+//     if (str[i] !== str[rightIndex]) {
+//       return false;
+//     }
+//   if (i >= rightIndex) {
+//     break;
+//   }
+// }
+// return true;
+// }
+
+
+function isPalindrome (str) {
+  for (let i = 0; i < str.length / 2; i++) {
+    let rightIndex = str.length - 1 - i;
+    if(str[i] !== str[rightIndex]) {
+      return false;
+    }
   }
-  return newStr;
+  return true;
 }
 
-console.log(repeatString("Abc", 3));
-console.log(repeatString("B", 5));
-console.log(repeatString("hello", 2));
+console.log(isPalindrome("racecar"));
+console.log(isPalindrome("abcd"));
+console.log(isPalindrome("Abcba"));
