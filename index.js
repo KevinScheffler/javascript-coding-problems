@@ -124,16 +124,33 @@
 // }
 
 
-function isPalindrome (str) {
-  for (let i = 0; i < str.length / 2; i++) {
-    let rightIndex = str.length - 1 - i;
-    if(str[i] !== str[rightIndex]) {
-      return false;
+// function isPalindrome (str) {
+//   for (let i = 0; i < str.length / 2; i++) {
+//     let rightIndex = str.length - 1 - i;
+//     if(str[i] !== str[rightIndex]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("abcd"));
+// console.log(isPalindrome("Abcba"));
+
+
+// countOdd 
+
+let countOdd = n => {
+  let odd = 0;
+  for (let i = n - 1; i > 0; i--) {
+    if (i % 2 === 1) {
+      odd++;
     }
   }
-  return true;
+  return odd;
 }
 
-console.log(isPalindrome("racecar"));
-console.log(isPalindrome("abcd"));
-console.log(isPalindrome("Abcba"));
+console.log(countOdd(5));
+console.log(countOdd(10));
+console.log(countOdd(1));
