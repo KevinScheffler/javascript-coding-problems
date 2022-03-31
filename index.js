@@ -141,15 +141,30 @@
 
 // countOdd 
 
-let countOdd = n => {
-  let odd = 0;
-  for (let i = n - 1; i > 0; i--) {
-    if (i % 2 === 1) {
-      odd++;
-    }
-  }
-  return odd;
+// const countOdd = n => {
+//   let odd = 0;
+//   for (let i = n - 1; i > 0; i--) {
+//     if (i % 2 === 1) {
+//       odd++;
+//     }
+//   }
+//   return odd;
+// }
+
+// const countOdd = n => {
+//   let counter = 0;
+//   while(n--) {
+//     if (n % 2 === 1) {
+//       counter++;
+//     }
+//   }
+//   return counter;
+// }
+
+function countOdd (n) {
+  return Math.floor(n / 2);
 }
+
 
 console.log(countOdd(5));
 console.log(countOdd(10));
