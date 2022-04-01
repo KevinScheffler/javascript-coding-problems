@@ -161,11 +161,27 @@
 //   return counter;
 // }
 
-function countOdd (n) {
-  return Math.floor(n / 2);
+// function countOdd (n) {
+//   return Math.floor(n / 2);
+// }
+
+
+// console.log(countOdd(5));
+// console.log(countOdd(10));
+// console.log(countOdd(1));
+
+
+// sumMultiples
+const sumMultiples = n => {
+  let sum = 0;
+  while(n--) {
+    if (n % 3 === 0 || n % 5 === 0) {
+      sum += n;
+    }
+  }
+  return sum;
 }
 
-
-console.log(countOdd(5));
-console.log(countOdd(10));
-console.log(countOdd(1));
+console.log(sumMultiples(10));
+console.log(sumMultiples(200));
+console.log(sumMultiples(2000));
