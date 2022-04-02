@@ -172,16 +172,56 @@
 
 
 // sumMultiples
-const sumMultiples = n => {
-  let sum = 0;
-  while(n--) {
-    if (n % 3 === 0 || n % 5 === 0) {
-      sum += n;
-    }
-  }
-  return sum;
+// const sumMultiples = n => {
+//   let sum = 0;
+//   while(n--) {
+//     if (n % 3 === 0 || n % 5 === 0) {
+//       sum += n;
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(sumMultiples(10));
+// console.log(sumMultiples(200));
+// console.log(sumMultiples(2000));
+
+
+
+
+
+
+
+// unbalancedArray
+
+// const unbalancedArray = nums => {
+//   let num = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (Math.abs(nums[i])) {
+//       num += nums[i];
+//     }
+//   }
+//   return num;
+// }
+
+// function unbalancedArray(nums) {
+//   // create sum var
+//   var sum = 0;
+//   // loop over nums
+//   for (var num of nums) {
+//     sum += num;
+//   }
+//   // return sum
+//   return sum;
+// }
+
+function unbalancedArray(nums) {
+  return nums.reduce(function(sum, num) {
+    return sum + num;
+  })
 }
 
-console.log(sumMultiples(10));
-console.log(sumMultiples(200));
-console.log(sumMultiples(2000));
+console.log(unbalancedArray([-1,4,1,5,-4]));
+console.log(unbalancedArray([12,1,14,-21,-1,22,21,-14,-22]));
+
+
