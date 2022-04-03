@@ -215,13 +215,50 @@
 //   return sum;
 // }
 
-function unbalancedArray(nums) {
-  return nums.reduce(function(sum, num) {
-    return sum + num;
-  })
+// function unbalancedArray(nums) {
+//   return nums.reduce(function(sum, num) {
+//     return sum + num;
+//   })
+// }
+
+// console.log(unbalancedArray([-1,4,1,5,-4]));
+// console.log(unbalancedArray([12,1,14,-21,-1,22,21,-14,-22]));
+
+
+
+
+
+
+// countVowels
+
+// const countVowels = s => {
+//   let splitStr = s.split('');
+//   let vowels = 0;
+//   for (let i = 0; i < splitStr.length; i++) {
+//     if (splitStr[i] === 'a' || splitStr[i] === 'e' || splitStr[i] === 'i' || splitStr[i] === 'o' || splitStr[i] === 'u') {
+//       vowels++;
+//     }
+//   }
+//   return vowels;
+// }
+
+function countVowels(s) {
+  // create counter
+  var counter = 0;
+  // loop over chars in s
+  for (var char of s) {
+    // if char is a vowel, increment counter
+    if (char === 'a' || char === 'e' ||
+        char === 'i' || char === 'o' || char === 'u') {
+          counter++
+        }
+  }
+  return counter
 }
 
-console.log(unbalancedArray([-1,4,1,5,-4]));
-console.log(unbalancedArray([12,1,14,-21,-1,22,21,-14,-22]));
+
+
+console.log(countVowels("adsbecdei"));
+console.log(countVowels("ffjnkjnj"));
 
 
