@@ -242,23 +242,41 @@
 //   return vowels;
 // }
 
-function countVowels(s) {
-  // create counter
-  var counter = 0;
-  // loop over chars in s
-  for (var char of s) {
-    // if char is a vowel, increment counter
-    if (char === 'a' || char === 'e' ||
-        char === 'i' || char === 'o' || char === 'u') {
-          counter++
-        }
+// function countVowels(s) {
+//   // create counter
+//   var counter = 0;
+//   // loop over chars in s
+//   for (var char of s) {
+//     // if char is a vowel, increment counter
+//     if (char === 'a' || char === 'e' ||
+//         char === 'i' || char === 'o' || char === 'u') {
+//           counter++
+//         }
+//   }
+//   return counter
+// }
+
+
+
+// console.log(countVowels("adsbecdei"));
+// console.log(countVowels("ffjnkjnj"));
+
+
+
+// How good are you really?
+
+function betterThanAverage(classPoints, yourPoints) {
+  let average = 0;
+  for (let i = 0; i < classPoints.length; i++) {
+    average += classPoints[i]
   }
-  return counter
+  if (yourPoints > average / classPoints.length) {
+    return true;
+  } else {
+    return false
+  }
 }
 
-
-
-console.log(countVowels("adsbecdei"));
-console.log(countVowels("ffjnkjnj"));
-
-
+console.log(betterThanAverage([2,3], 5));
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
