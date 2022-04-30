@@ -265,18 +265,44 @@
 
 // How good are you really?
 
-function betterThanAverage(classPoints, yourPoints) {
-  let average = 0;
-  for (let i = 0; i < classPoints.length; i++) {
-    average += classPoints[i]
+// function betterThanAverage(classPoints, yourPoints) {
+//   let average = 0;
+//   for (let i = 0; i < classPoints.length; i++) {
+//     average += classPoints[i]
+//   }
+//   if (yourPoints > average / classPoints.length) {
+//     return true;
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(betterThanAverage([2,3], 5));
+// console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
+// console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+
+
+
+// Count of positives / sum of negatives
+
+function countPositivesSumNegatives(input) {
+  let count = [];
+  let negativeSum = 0;
+  let arr = [];
+  for (let i = 0; i < input.length; i++) {
+    if (input == null || input.length == 0) {
+      return [];
+    } else if (input[i] > 0) {
+      count++
+    } else {
+      negativeSum += input[i];
+    }
   }
-  if (yourPoints > average / classPoints.length) {
-    return true;
-  } else {
-    return false
-  }
+  arr.push(count, negativeSum);
+  return arr;
 }
 
-console.log(betterThanAverage([2,3], 5));
-console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75));
-console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9));
+
+
+
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
